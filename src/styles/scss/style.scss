@@ -1,0 +1,44 @@
+@import '../../components/scss/nullstyle'; // сброс стилей
+@import '../../components/scss/fonts'; // подключение шрифтов
+@import '../../components/scss/variables'; // подключение scss переменных
+
+body {
+  font-family: 'Neue Machina', sans-serif;
+  background: $page-bg;
+  overflow: overlay;
+}
+
+[class*=__container] {
+  max-width: 1860px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "sidebar header header"
+    "sidebar main main"
+    "footer footer footer";
+  grid-template-rows: 90px 1fr 50px;
+  grid-template-columns: 75px 1fr;
+  height: calc(100vh - 60px);
+  gap: 10px;
+  max-width: 1860px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+header,aside,main {
+  background: $panel-bg;
+}
+
+// components
+@import '../../components/scss/header';
+@import '../../components/scss/sidebar';
+@import '../../components/scss/main';
+@import '../../components/scss/footer';
