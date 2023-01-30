@@ -1,0 +1,29 @@
+.mobile-header {
+  background: transparent;
+  display: none;
+  grid-area: mobile-header;
+  margin-bottom: 18px;
+  align-items: center;
+  justify-content: space-between;
+
+  .hamburger {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #313B52;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+
+    &::before, &::after {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 1px;
+      background:  #B5C4E3;
+    }
+  }
+}

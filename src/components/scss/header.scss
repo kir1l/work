@@ -35,6 +35,9 @@
     text-transform: uppercase;
     font-weight: 700;
     margin-right: 30px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 50px;
   }
 
   .dropdowns {
@@ -63,11 +66,13 @@
     margin-left: auto;
     color: #4E5E80;
     margin-right: 18px;
+    white-space: nowrap;
+    padding-left: 30px;
 
     span {
       font-size: 12px;
       color: #B5C4E3;
-      padding: 8px 8px;
+      padding: 10px 8px;
       background: #313B52;
       border-radius: 50%;
     }
@@ -75,5 +80,85 @@
 
   .btn-claim {
     padding: 20px 40px;
+    @media screen and (max-width: 840px) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 660px) {
+   .token {
+     margin-right: 15px;
+   }
+    .dropdowns {
+      gap: 8px;
+    }
+  }
+
+  @media screen and (max-width: 585px) {
+    &__btn-connect {
+      border-radius: 6px !important;
+      font-size: 12px !important;
+    }
+
+    .token {
+      font-size: 0;
+      min-width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      background: url("../assets/images/svg/wallet.svg") no-repeat center , linear-gradient(180deg, #E7DF36 0%, #EFB23D 100%) ;
+    }
+
+    .dropdowns {
+      gap: 4px;
+    }
+
+    .dropdown {
+      font-size: 0;
+      padding: 8px 10px;
+      border-radius: 6px;
+
+      .selected {
+        font-size: 12px;
+        background: transparent;
+        margin: 0 4px;
+      }
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+      }
+
+      &-home::before {
+        background: url("../assets/images/svg/ic_home.svg") no-repeat center;
+      }
+
+      &-tables::before {
+        background: url("../assets/images/svg/ic_table.svg") no-repeat center;
+      }
+
+    }
+
+    .places {
+      white-space: nowrap;
+      font-size: 0;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url("../assets/images/svg/chair.svg")  no-repeat center ;
+        margin-right: 4px;
+      }
+
+      span {
+        font-size: 16px;
+        padding: 4px 0;
+        background: transparent;
+      }
+    }
   }
 }
