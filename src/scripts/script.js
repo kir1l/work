@@ -1,16 +1,9 @@
-const btnConnect = document.querySelector('.header__btn-connect'),
-    btnModeGrid = document.querySelector('.mode-list'),
+const btnModeGrid = document.querySelector('.mode-list'),
     btnNodeSlide = document.querySelector('.mode-slide'),
     mainOut = document.querySelector('.main__out'),
-    cond1 = document.querySelector('.cond1'),
-    cond2 = document.querySelector('.cond2'),
     mobileToggle = document.querySelector('.mobile-toggle-mode');
 
 
-btnConnect.addEventListener('click', () => {
-    cond1.classList.toggle('hidden')
-    cond2.classList.toggle('hidden')
-})
 
 const listPattern = window.innerWidth <= 550 ? `<svg width="234" height="140" viewBox="0 0 234 140" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_116_4341)">
@@ -142,8 +135,3 @@ mobileToggle.addEventListener('click', () => {
 })
 
 
-// PRELOADER
-
-setTimeout(() => {
-    document.body.classList.remove('loading')
-}, 1500)

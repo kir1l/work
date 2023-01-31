@@ -34,10 +34,6 @@
         background: #222A3A
       }
     }
-
-    .active {
-      background: #222A3A
-    }
   }
 
   &__links a {
@@ -64,9 +60,11 @@
       flex-direction: row;
       justify-content: space-between;
 
-      li {
+      a {
         flex: 33.333%;
-        padding: 14px;
+        li {
+          padding: 14px;
+        }
       }
     }
 
