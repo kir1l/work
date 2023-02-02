@@ -4,8 +4,7 @@ const btnModeGrid = document.querySelector('.mode-list'),
     mobileToggle = document.querySelector('.mobile-toggle-mode');
 
 
-
-const listPattern = window.innerWidth <= 550 ? `<svg width="234" height="140" viewBox="0 0 234 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+const listPattern = window.innerWidth >= 550 ? `<svg width="234" height="140" viewBox="0 0 234 140" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_116_4341)">
     <path d="M234 70.0145C234 57.7236 228.684 46.1558 219.375 36.0917V17.5831H213.942V12.0017H182.519C163.812 4.42471 141.287 0 117 0C92.7131 0 70.1589 4.42471 51.4812 12.0017H20.058V17.6121H14.625V36.1206C5.31551 46.1558 0 57.6947 0 70.0145" class="hov" fill="#384156"/>
     <path d="M0 70.0144C0 82.3053 5.31551 93.8731 14.625 103.937V122.446H20.058V128.056H51.4812C70.1883 135.633 92.7131 140.058 117 140.058C141.287 140.058 163.841 135.633 182.519 128.056H213.942V122.446H219.375V103.937C228.684 93.902 234 82.3342 234 70.0144" class="hov" fill="#384156"/>

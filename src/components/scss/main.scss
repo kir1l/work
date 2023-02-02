@@ -143,10 +143,10 @@
     .toggle-list {
       background: #222A3A url("../assets/images/svg/slaid.svg") no-repeat center;
     }
-  }
 
-  .mode-grid {
-    grid-template-columns: repeat(auto-fill, 100px);
+    .mode-grid {
+      grid-template-columns: repeat(auto-fill, 100px);
+    }
   }
 }
 
