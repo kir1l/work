@@ -65,6 +65,10 @@
     align-items: center;
     color: #4E5E80;
   }
+
+  @media screen and (max-width: 750px){
+    padding: 0 15px 0;
+  }
 }
 
 
@@ -74,12 +78,27 @@
   align-items: center;
 }
 
+.filters-btn {
+  border: 0;
+  outline: none;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  background: #222A3A;
+  border-radius: 6px;
+
+  @media screen and (min-width: 750px){
+    display: none;
+  }
+}
+
 .filter {
   padding: 11px 25px;
   background: #222A3A;
   border-radius: 22px;
   cursor: pointer;
   transition: background .3s ease;
+  text-align: center;
 
   &-active {
     background: #313B52;
@@ -96,6 +115,10 @@
 
   &:hover {
     background: #252E40;
+  }
+
+  @media screen and (max-width: 750px){
+    display: none;
   }
 
 }
@@ -172,7 +195,8 @@
   gap: 16px;
   padding: 16px 0;
   max-height: 700px;
-  overflow-y: overlay;
+  overflow-y: scroll;
+
 
   @media screen and (max-width: 1800px){
     grid-template-columns: repeat(4, 1fr);
@@ -193,23 +217,31 @@
   @media screen and (max-width: 780px){
     .table {
       background: url("../assets/images/table-small.webp") no-repeat center;
-      background-size: cover;
-      font-size: 12px;
+      font-size: 14px;
       justify-content: center;
+      background-size: cover;
 
       &__num {
-        font-size: 12px;
+        font-size: 14;
         margin: 0;
       }
 
       &__places {
-        gap: 0;
+        gap: 4px;
         background: none;
-        padding: 0;
+        padding: 4px;
       }
     }
     gap: 8px;
+    justify-content: space-around;
     grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 650px){
+    gap: 13px 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 490px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

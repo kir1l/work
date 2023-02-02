@@ -27,6 +27,11 @@
     }
   }
 
+  &__social {
+    display: flex;
+    gap: 8px;
+  }
+
   &__social a img {
 
     transition: all .3s ease;
@@ -38,6 +43,5 @@
 
   @media screen and (max-width: 680px) {
     display: none;
-
   }
 }
