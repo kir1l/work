@@ -100,6 +100,14 @@
         text-align: center;
       }
     }
+    @media screen and (max-width: 450px) {
+      font-size: 14px;
+
+      .info {
+        gap: 8px;
+      }
+
+    }
   }
 
 
@@ -160,6 +168,12 @@
     display: flex;
     align-items: flex-end;
     padding-top: 60px;
+    box-sizing: border-box !important;
+
+    @media screen and (max-width: 565px) {
+      padding-top: 0 ;
+      align-items: center;
+    }
   }
 
   &-slide-prev, &-slide-next {
@@ -193,21 +207,35 @@
   }
   &-slide {
     flex: 20%;
-    background: url("../assets/images/room.webp") no-repeat;
+    background: url("../assets/images/room.webp") center no-repeat;
     background-size: contain;
     transition: background ,3s ease;
     max-height: 700px;
 
-    //&:hover {
-    //  background: url("../assets/images/room-hover.webp") no-repeat;
-    //  background-size: contain;
-    //}
+    &:hover {
+      background: url("../assets/images/room-hover.webp") center no-repeat;
+      background-size: contain;
+    }
+
+    @media screen and (max-width: 2000px) {
+      flex: 15%;
+    }
+
+    @media screen and (max-width: 1600px) {
+      flex: 19%;
+    }
+
+    @media screen and (max-width: 1300px) {
+      flex: 25%;
+    }
+
+    @media screen and (max-width: 1000px) {
+      flex: 33.333%;
+    }
 
     @media screen and (max-width: 565px) {
-      width: 170px !important;
-      height: 320px !important;
-      background: url("../assets/images/room-mobile.webp") no-repeat;
-
+      flex: 100%;
+      background-size: contain;
 
       &-prev, &-active, &-next {
         margin-bottom: 0;
