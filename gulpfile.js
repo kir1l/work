@@ -136,6 +136,11 @@ function svg() {
     .pipe(gulp.dest(path.svg.dest))
 }
 
+function favicon() {
+	return gulp.src('src/assets/favicon/*')
+		.pipe(gulp.dest('dist/assets/favicon/'))
+}
+
 // =============== шрифты =============
 
 function fonts() {
@@ -176,11 +181,11 @@ function watch() {
 // dev и prod
 exports.prod = gulp.series(
 	clean,
-	gulp.parallel(scripts, stylesProd, fonts, html, img, svg)
+	gulp.parallel(scripts, stylesProd, fonts, html, img, svg, favicon)
 );
 exports.dev = gulp.series(
 	clean,
-	gulp.parallel(scripts, stylesDev, fonts, html, img, svg),
+	gulp.parallel(scripts, stylesDev, fonts, html, img, svg, favicon),
 	watch
 );
 module.exports.default = this.dev;
