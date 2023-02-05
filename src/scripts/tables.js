@@ -27,4 +27,4 @@ function generateTable(amount) {
 }
 
 
-out.innerHTML = generateTable(30)
+out.innerHTML += generateTable(30)

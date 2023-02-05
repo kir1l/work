@@ -22,40 +22,11 @@ body {
       display: none;
     }
 
-    &::before, &::after {
-      content: '';
+    .preloader {
       display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-    }
-
-    &::before {
-      width: 140px;
-      height: 140px;
-      background: #222A3A url("../assets/images/svg/loader-logo.svg") no-repeat center;
-      z-index: 2;
-    }
-
-    &::after {
-      width: 142px;
-      height: 142px;
-      border: 1px solid transparent;
-      border-top-color:#B5C4E3;
-      animation: spinner .7s linear infinite;
     }
   }
 
-}
-
-@keyframes spinner {
-  from {
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg) ;
-  }
 }
 
 [class*=__container] {
@@ -144,7 +115,6 @@ header,aside,main {
       background: #313B52;
       border-radius: 12px;
     }
-
   }
 }
 
@@ -154,3 +124,4 @@ header,aside,main {
 @import '../../components/scss/sidebar';
 @import '../../components/scss/footer';
 @import '../../components/scss/mobile-menu';
+@import '../../components/scss/preloder';
