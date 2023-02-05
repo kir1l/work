@@ -80,7 +80,7 @@ body {
   max-width: 1860px;
   margin: 0 auto;
   padding: 30px 30px 0;
-  min-height: 100vh;
+  height: 100vh;
 
   @media screen and (max-width: 680px) {
     gap: 0;
@@ -102,29 +102,50 @@ header,aside,main {
   background: $panel-bg;
 }
 
-.main__out {
 
-  /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  & {
-    scrollbar-width: auto;
-    scrollbar-color: #8f54a0 #ffffff;
+
+.main {
+  position: relative;
+
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222A3A;
+    opacity: 0.6;
+    z-index: 100;
+    display: none;
+
+    &-active {
+      display: block;
+    }
   }
 
-  /* Chrome, Edge, and Safari */
-  &::-webkit-scrollbar {
-    width: 16px;
-  }
+  &__out {
+    /* ===== Scrollbar CSS ===== */
+    /* Firefox */
+    & {
+      scrollbar-width: auto;
+      scrollbar-color: #8f54a0 #ffffff;
+    }
 
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
+    /* Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: 16px;
+    }
 
-  &::-webkit-scrollbar-thumb {
-    background: #313B52;
-    border-radius: 12px;
-  }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
 
+    &::-webkit-scrollbar-thumb {
+      background: #313B52;
+      border-radius: 12px;
+    }
+
+  }
 }
 
 // components
@@ -132,3 +153,4 @@ header,aside,main {
 @import '../../components/scss/header';
 @import '../../components/scss/sidebar';
 @import '../../components/scss/footer';
+@import '../../components/scss/mobile-menu';

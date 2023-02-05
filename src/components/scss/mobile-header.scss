@@ -25,5 +25,20 @@
       height: 1px;
       background:  #B5C4E3;
     }
+
+    &-active {
+      &::before, &::after {
+        background: #E7DF36;
+        position: absolute;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
   }
 }

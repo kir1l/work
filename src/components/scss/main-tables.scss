@@ -1,7 +1,6 @@
 @import "fonts";
 
 .wrapper {
-
   @media screen and (max-width: 820px) {
     gap: 0;
     grid-template-areas:
@@ -56,6 +55,7 @@
   padding: 30px 15px 0;
 
   &__header {
+    position: relative;
     background: #293145;
     border: 1px solid #384156;
     border-radius: 24px;
@@ -76,6 +76,30 @@
   display: flex;
   gap: 0 8px;
   align-items: center;
+
+  @media screen and (max-width: 750px){
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    width: 100%;
+    flex-direction: column;
+    background: #293145;
+    border-radius: 12px;
+    gap: 10px;
+    padding: 8px;
+
+    .filter {
+      background: #313B52;
+      border-radius: 22px;
+      width: 100%;
+    }
+  }
+
+  &-active {
+    display: flex !important;
+  }
 }
 
 .filters-btn {
@@ -86,6 +110,10 @@
   width: 30px;
   background: #222A3A;
   border-radius: 6px;
+
+  &-clicked svg path {
+    fill: #E7DF36;
+  }
 
   @media screen and (min-width: 750px){
     display: none;
@@ -116,11 +144,6 @@
   &:hover {
     background: #252E40;
   }
-
-  @media screen and (max-width: 750px){
-    display: none;
-  }
-
 }
 
 .table {
@@ -194,7 +217,7 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   padding: 16px 0;
-  max-height: 700px;
+  max-height: 600px;
   overflow-y: scroll;
 
 
