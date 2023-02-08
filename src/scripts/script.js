@@ -5,7 +5,7 @@ const btnModeGrid = document.querySelector('.mode-list'),
 
 function generateListItems(amount) {
     let res = ''
-    for (let i = 0; i <= amount; i++) {
+    for (let i = 1; i <= amount; i++) {
         res+= `
         <div class="slide__info">
             <div class="slider__title">poker room</div>
