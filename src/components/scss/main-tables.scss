@@ -53,6 +53,11 @@
 
 .main {
   padding: 30px 15px 0;
+  grid-area: main;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 
   &__header {
     position: relative;

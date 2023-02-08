@@ -19,12 +19,12 @@ function fillPattern(
     `
 }
 function generateTable(amount) {
+    // тут должен быть запрос
     let res = ''
     for (let i = 0; i <= amount; i++) {
         res += fillPattern('table', i, 'free places', 9, 10)
     }
     return res
 }
-
 
 out.innerHTML += generateTable(30)

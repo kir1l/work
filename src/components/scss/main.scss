@@ -20,30 +20,47 @@
     overflow-y: scroll;
     max-height: 70vh;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 235px);
+    grid-template-columns: repeat(6, 1fr);
     padding: 0 17px 150px;
     gap: 11px;
     justify-content: center;
 
 
-    > svg {
-      width: fit-content;
+    .slide__info {
 
-      &:hover .hov {
-        fill: #D1AE1E !important;
+      padding: 22px;
+      background: url("../assets/images/room-frame.webp") center no-repeat;
+
+      .slider__title {
+        color: #4E5E80;
+        text-align: center;
       }
+
+      .slider__lvl {
+        color: #B5C4E3;
+        font-size: 19px;
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 1400px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @media screen and (max-width: 1100px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media screen and (max-width: 900px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 550px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 450px) {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
   &__header {
-    padding: 16px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #384156;
-    border-radius: 24px;
-    margin: 30px 16px 16px;
-
     @media screen and (max-width: 680px) {
       margin: 5px 16px 16px;
     }
@@ -110,8 +127,6 @@
     }
   }
 
-  // TODO: Сделать JS
-
   .button-mode {
     padding: 11px 15px;
     width: 80px;
@@ -151,10 +166,6 @@
 
     .toggle-list {
       background: #222A3A url("../assets/images/svg/slaid.svg") no-repeat center;
-    }
-
-    .mode-grid {
-      grid-template-columns: repeat(auto-fill, 100px);
     }
   }
 }
@@ -212,10 +223,54 @@
     background-size: contain;
     transition: background ,3s ease;
     max-height: 700px;
+    position: relative;
+
+    .slide__info {
+      position: absolute;
+      z-index: 3;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 86px;
+      width: 140px;
+      padding: 22px;
+      background: url("../assets/images/room-frame.webp") center no-repeat;
+
+      .slider__title {
+        color: #4E5E80;
+        text-align: center;
+      }
+
+      .slider__lvl {
+        color: #B5C4E3;
+        font-size: 19px;
+        text-align: center;
+      }
+
+      @media screen and (min-height: 900px) {
+        top: 130px;
+      }
+      @media screen and (min-height: 1000px) {
+        top: 190px;
+      }
+    }
 
     &:hover {
       background: url("../assets/images/room-hover.webp") center no-repeat;
       background-size: contain;
+
+      .slide__info {
+        background: url("../assets/images/room-frame-hover.webp") center no-repeat;
+
+        .slider__title {
+          color: #E8D837;
+        }
+
+        .slider__lvl {
+          color: #6B560F;
+        }
+
+      }
     }
 
     @media screen and (max-width: 2000px) {
