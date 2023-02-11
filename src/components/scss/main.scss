@@ -47,6 +47,29 @@
         text-align: center;
       }
 
+      .btn-go {
+        border: none;
+        outline: none;
+        color: #B5C4E3;
+        padding: 15px 30px;
+        background: #222A3A;
+        border-radius: 12px;
+        display: none;
+
+        &:hover {
+          background: #293145;
+        }
+      }
+
+      &-active {
+       .btn-go {
+         display: block;
+       }
+        .slider__lvl {
+          display: none;
+        }
+      }
+
       &:hover {
         background: url("../assets/images/tables-frame-hover.webp") center no-repeat;
       }
@@ -205,6 +228,24 @@
   &-slide-active {
     transition:  .3s ease;
     margin-bottom: 60px;
+
+    &:hover {
+      background: url("../assets/images/room-hover.webp") center no-repeat;
+      background-size: contain;
+
+      .slide__info {
+        background: url("../assets/images/room-frame-hover.webp") center no-repeat;
+
+        .slider__title {
+          color: #E8D837;
+        }
+
+        .slider__lvl {
+          color: #6B560F;
+        }
+
+      }
+    }
   }
 
   &::before, &::after {
@@ -256,31 +297,19 @@
         text-align: center;
       }
 
+      @media screen and (max-height: 800px) {
+        top: 50px;
+      }
       @media screen and (min-height: 900px) {
         top: 130px;
       }
-      @media screen and (min-height: 1000px) {
+      @media screen and (min-height: 1010px) {
         top: 190px;
       }
+
     }
 
-    &:hover {
-      background: url("../assets/images/room-hover.webp") center no-repeat;
-      background-size: contain;
 
-      .slide__info {
-        background: url("../assets/images/room-frame-hover.webp") center no-repeat;
-
-        .slider__title {
-          color: #E8D837;
-        }
-
-        .slider__lvl {
-          color: #6B560F;
-        }
-
-      }
-    }
 
     @media screen and (max-width: 2000px) {
       flex: 15%;

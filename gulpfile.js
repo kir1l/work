@@ -121,11 +121,6 @@ function img() {
 	return gulp.src(path.img.src)
     .pipe(newer(path.img.dest))
 	.pipe(webp())
-    .pipe(image({
-        key: 'fPv2DXfQrCWJSzLR8wbSW3CfNmhNTYVg',
-        sigFile: 'images/.tinypng-sigs',
-        log: true
-    }))
     .pipe(gulp.dest(path.img.dest))
 }
 

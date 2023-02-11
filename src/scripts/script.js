@@ -10,10 +10,24 @@ function generateListItems(amount) {
         <div class="slide__info">
             <div class="slider__title">poker room</div>
             <div class="slider__lvl">№ ${i}</div>
+            <button class="btn-go">go</button>
         </div>
         `
     }
     return res
+}
+
+function addListItemClick() {
+    let slides = document.querySelectorAll('.mode-grid .slide__info')
+
+    slides.forEach(slide => {
+        slide.onclick = ({ target }) => {
+            slides.forEach(otherSlide => {
+                otherSlide.classList.remove('slide__info-active')
+            })
+            target.classList.add('slide__info-active')
+        }
+    })
 }
 
 function generateSlideItems(amount) {
@@ -38,13 +52,14 @@ function generateSlideItems(amount) {
         </div>`
 }
 
-mainOut.innerHTML = generateSlideItems(20)
+mainOut.innerHTML += generateSlideItems(20)
 
 btnModeGrid.addEventListener('click', () => {
     mainOut.classList.add('mode-grid')
     btnNodeSlide.classList.remove('button-mode-active')
     btnModeGrid.classList.add('button-mode-active')
     mainOut.innerHTML = generateListItems(69)
+    addListItemClick()
 })
 
 btnNodeSlide.addEventListener('click', () => {
@@ -69,6 +84,7 @@ btnNodeSlide.addEventListener('click', () => {
         centeredSlides: true,
         slideToClickedSlide: true
     });
+    addSlidesClick()
 })
 
 mobileToggle.addEventListener('click', () => {
@@ -93,7 +109,7 @@ mobileToggle.addEventListener('click', () => {
             centeredSlides: true,
             slideToClickedSlide: true
         });
-
+        addSlidesClick()
         return
     }
 
