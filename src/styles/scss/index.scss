@@ -7,3 +7,67 @@
    fill: #E7DF36 !important;
  }
 }
+
+.modal__disable-wallet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 416px;
+  height: 232px;
+  background: #293145;
+  border-radius: 24px;
+  padding: 60px;
+  z-index: 20;
+
+  .modal__title {
+    margin-bottom: 30px;
+    color: #B5C4E3;
+    text-align: center;
+  }
+
+  .modal__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    .modal__btn {
+      border: none;
+      outline: none;
+      border-radius: 24px;
+      background: #222A3A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 30px;
+      color: #B5C4E3;
+      font-weight: 700;
+      transition: .1s ease;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+
+    .btn-active {
+      color: #222A3A;
+      background: linear-gradient(180deg, #E7DF36 0%, #EFB23D 100%);
+    }
+  }
+
+  @media screen and (max-width: 420px){
+    width: 228px;
+    height: 142px;
+    padding: 30px;
+
+    .modal__buttons {
+      gap: 8px;
+
+      .modal__btn {
+        padding: 13px;
+        border-radius: 12px;
+      }
+    }
+  }
+}

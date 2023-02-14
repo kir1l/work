@@ -108,10 +108,34 @@
         }
       }
     }
+
+    &-loading {
+      pointer-events: none;
+      .selected {
+        position: relative;
+        overflow: hidden;
+        font-size: 0;
+        min-height: 30px;
+        min-width: 30px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 60%;
+          height: 60%;
+          border-radius: 50%;
+          border-top: 1px solid #222A3A;
+          border-bottom: 1px solid #4E5E80;
+          animation: spinner .9s infinite;
+        }
+      }
+    }
   }
 
   @media screen and (max-width: 810px) {
-
     .menu {
       transform: translate(-40%, 100%) !important;
     }
@@ -200,7 +224,6 @@
       &-tables::before {
         background: url("../assets/images/svg/ic_table.svg") no-repeat center;
       }
-
     }
 
     .places {

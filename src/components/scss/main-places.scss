@@ -121,6 +121,39 @@
 	}
 
 
+	&-loading {
+	  pointer-events: none;
+	  position: relative;
+	  overflow: hidden;
+
+	  .player__card {
+		display: none !important;
+	  }
+
+	  .player__title {
+		color: transparent;
+	  }
+
+	  .player__number {
+		color: transparent;
+	  }
+
+	  &::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border-top: 1px solid #222A3A;
+		border-bottom: 1px solid #4E5E80;
+		animation: spinner .9s infinite;
+	  }
+	}
+
+
 	// Состояние игрока с картой
 	&-active {
 	  .player__badge {

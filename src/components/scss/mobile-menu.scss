@@ -60,18 +60,16 @@
   @media screen and (max-width: 450px){
     height: 300px;
 
-    .menu__links {
+    .mobile-menu__links {
       padding: 30px 0;
-      font-size: 24px;
+      font-size: 24px !important;
 
       li:not(:last-child) {
         margin-bottom: 8px;
       }
     }
 
-
-
-    .menu__other-links {
+    .mobile-menu__other-links {
       flex-direction: column;
       justify-content: center;
 

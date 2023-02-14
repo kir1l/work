@@ -7,7 +7,7 @@ function generateHtml(number) {
                 <div class="player__armchair">
                     
                 </div>
-                <div class="player__badge">
+                <div class="player__badge  player-loading"">
                     <div class="player__card">
                         <!-- тут должна находться карта игрока -->
                         <img src="./assets/images/svg/card.svg" alt="card">
