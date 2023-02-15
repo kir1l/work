@@ -131,11 +131,11 @@
 	  }
 
 	  .player__title {
-		color: transparent;
+		color: transparent !important;
 	  }
 
 	  .player__number {
-		color: transparent;
+		color: transparent !important;
 	  }
 
 	  &::after {
