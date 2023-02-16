@@ -88,14 +88,36 @@
       grid-template-columns: repeat(2, 1fr);
     }
     @media screen and (max-width: 590px) {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(3, 100px);
+      padding: 30px 0;
+      justify-content: space-around;
+
+
+      .slide__info {
+        height: 60px;
+        max-width: 100px;
+        background-size: cover;
+        font-size: 12px;
+        gap: 0;
+
+        .slider__lvl {
+          font-size: 12px;
+        }
+
+        &:hover {
+          background: url("../assets/images/tables-frame.webp") center no-repeat;
+          background-size: cover;
+        }
+      }
     }
   }
 
   &__header {
     @media screen and (max-width: 680px) {
-      margin: 5px 16px 16px;
+      margin: 30px 16px 0;
+      border-radius: 12px;
     }
+
   }
 
   &__out {
@@ -142,7 +164,6 @@
         .info__item {
           display: none;
         }
-
         width: 30px;
         height: 30px;
         background: url("../assets/images/arrow.webp") no-repeat center;
@@ -261,6 +282,7 @@
     width: 330px;
     z-index: 2;
     pointer-events: none;
+
   }
 
   &::before {
@@ -290,6 +312,7 @@
       width: 140px;
       padding: 22px;
       background: url("../assets/images/room-frame.webp") center no-repeat;
+      background-size: contain;
 
       .slider__title {
         color: #4E5E80;
@@ -301,25 +324,39 @@
         font-size: 19px;
         text-align: center;
       }
-
-      @media screen and (max-height: 640px) {
-        transform: scale(.7) translateX(-72%) !important;
-        top: 20px !important;
-      }
-      @media screen and (max-height: 725px) {
+      @media screen and (max-width: 900px) {
         transform: scale(.8) translateX(-62%);
-        top: 20px;
+      }
+      @media screen and (max-width: 450px) {
+        transform: scale(.6) translateX(-82%);
       }
       @media screen and (max-height: 800px) {
+        top: 70px;
+      }
+      @media screen and (max-height: 740px) {
         top: 50px;
       }
-      @media screen and (min-height: 900px) {
-        top: 130px;
+      @media screen and (max-width: 700px) {
+        top: 70px;
       }
-      @media screen and (min-height: 1010px) {
-        top: 190px;
+      @media screen and (max-width: 600px) {
+        top: 90px;
       }
-
+      @media screen and (max-width: 500px) {
+        top: 30px;
+      }
+      @media screen and (max-width: 500px) and (min-height: 650px){
+        top: 50px;
+      }
+      @media screen and (max-width: 500px) and (min-height: 690px){
+        top: 80px;
+      }
+      @media screen and (max-width: 500px) and (min-height: 750px){
+        top: 110px;
+      }
+      @media screen and (max-width: 420px) and (min-height: 750px){
+        top: 160px;
+      }
     }
 
 
@@ -348,6 +385,14 @@
     right: 40px !important;
     left: auto;
     transition: background .3s ease;
+    z-index: 12938120398102;
+
+    &:hover::after {
+      background:
+              #EFB23D
+              url("../assets/images/svg/chevron-hover.svg")
+              no-repeat center;
+    }
   }
 
   &-button-prev {
@@ -365,7 +410,6 @@
     display: block;
     padding: 22px;
     border-radius: 50%;
-    font-family: sans-serif !important;
     content: '' !important;
     background: #222A3A url("../assets/images/svg/chevron.svg") no-repeat center;
     position: absolute;
@@ -373,6 +417,10 @@
     @media screen and (max-width: 565px) {
       width: 40px !important;
       height: 40px !important;
+    }
+
+    &:hover {
+      display: none;
     }
   }
 

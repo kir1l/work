@@ -1,5 +1,6 @@
 <main class="main main__places">
-    <div class="main__header">
+    <div class="header-wrapper">
+        <div class="main__header">
         <div class="header__info">
             <div class="table-info">
                 Table №<span id="tableNumber">2</span>
@@ -14,7 +15,7 @@
             </svg>
         </div>
     </div>
-
+    </div>
     <div class="main__out">
         <div class="place"></div>
         <div class="preloader"></div>
@@ -35,12 +36,12 @@
                 </div>
             </header>
             <!--    Разные состояния модалки  (Инлайн стили надо убрать) -->
-            <div style="display: none"  class="modal__body modal-basket-empty">
+            <div  class="modal__body modal-basket-empty">
                 <div class="text">
                     <p>Your basket  is empty</p>
                     <p class="text-bold">Please choose places</p>
                 </div>
-            </div>
+            </div style="display: none">
             <!--    тут карты динамически заполнять надо    -->
             <div style="display: none" class="modal__body modal-card-select">
                 <div class="card">
@@ -784,7 +785,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="modal__body modal-places">
+            <div style="display: none" class="modal__body modal-places">
 
                 <div class="modal-top__buttons">
                     <button class="top-btn btn-info">place <span class="place-number">№ 3</span></button>

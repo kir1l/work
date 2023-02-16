@@ -64,6 +64,15 @@
 		padding: 8px;
 	  }
 	}
+
+	@media screen and (max-width: 680px){
+		margin: 8px 8px 0;
+	  	padding: 8px;
+	}
+
+	@media screen and (max-width: 585px) {
+	  border-radius: 12px;
+	}
   }
 }
 
@@ -609,6 +618,7 @@
   right: 16px;
   background: #293145;
   border-radius: 24px;
+  overflow: hidden;
   flex-direction: column;
   width: 470px;
   height: calc(100% - 32px);
@@ -705,7 +715,7 @@
 	  }
 
 	  &-bold {
-		margin-top: 8px;
+		margin-top: 10px;
 		color: #B5C4E3;
 	  }
 	}

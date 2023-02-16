@@ -2,6 +2,7 @@
 
 .wrapper {
   @media screen and (max-width: 820px) {
+
     gap: 0;
     grid-template-areas:
     "mobile-header mobile-header mobile-header"
@@ -14,6 +15,10 @@
     .mobile-header {
       display: flex;
     }
+
+    .main {
+      border-radius: 0;
+    }
   }
 
   .footer {
@@ -24,6 +29,7 @@
 
   .sidebar {
     @media screen and (max-width: 820px) {
+      margin-right: 0;
       padding: 16px 30px;
       border-radius: 0 0 24px 24px;
 
@@ -52,7 +58,6 @@
 }
 
 .main {
-  padding: 30px 15px 0;
   grid-area: main;
   position: relative;
   display: flex;
@@ -69,10 +74,15 @@
     justify-content: space-between;
     align-items: center;
     color: #4E5E80;
-  }
 
-  @media screen and (max-width: 750px){
-    padding: 0 15px 0;
+    @media screen and (max-width: 680px){
+      margin: 8px 8px 0;
+      padding: 8px;
+    }
+
+    @media screen and (max-width: 585px) {
+      border-radius: 12px;
+    }
   }
 }
 
@@ -151,7 +161,7 @@
   }
 
   &-loading {
-    pointer-events: none;
+      pointer-events: none;
       position: relative;
       overflow: hidden;
       color: transparent;
@@ -243,8 +253,7 @@
   justify-content: center;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
-  padding: 16px 0;
-  max-height: 600px;
+  padding: 16px;
   overflow-y: scroll;
 
 
@@ -272,7 +281,7 @@
       background-size: cover;
 
       &__num {
-        font-size: 14;
+        font-size: 14px;
         margin: 0;
       }
 
@@ -291,7 +300,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
   @media screen and (max-width: 490px) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    .table {
+      height: 90px;
+      width: 100px;
+    }
   }
 }
 
