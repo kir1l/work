@@ -191,8 +191,7 @@
   }
 
   .button-mode {
-    padding: 11px 15px;
-    width: 80px;
+    padding: 11px 30px;
     border-radius: 22px;
     background: #313B52;
     border: 0;
@@ -325,19 +324,13 @@
         text-align: center;
       }
       @media screen and (max-width: 900px) {
-        transform: scale(.8) translateX(-62%);
-      }
-      @media screen and (max-width: 450px) {
-        transform: scale(.6) translateX(-82%);
+        top: 130px;
       }
       @media screen and (max-height: 800px) {
         top: 70px;
       }
       @media screen and (max-height: 740px) {
         top: 50px;
-      }
-      @media screen and (max-width: 700px) {
-        top: 70px;
       }
       @media screen and (max-width: 600px) {
         top: 90px;
@@ -353,9 +346,6 @@
       }
       @media screen and (max-width: 500px) and (min-height: 750px){
         top: 110px;
-      }
-      @media screen and (max-width: 420px) and (min-height: 750px){
-        top: 160px;
       }
     }
 
@@ -373,8 +363,8 @@
       flex: 25%;
     }
 
-    @media screen and (max-width: 1000px) {
-      flex: 33.333%;
+    @media screen and (max-width: 600px) {
+      flex: 50%;
     }
 
   }
