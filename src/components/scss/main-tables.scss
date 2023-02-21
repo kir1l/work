@@ -1,0 +1,309 @@
+@import "fonts";
+
+.wrapper {
+  @media screen and (max-width: 820px) {
+    gap: 0;
+    grid-template-areas:
+      "mobile-header mobile-header mobile-header"
+      "header header header"
+      "main main main"
+      "sidebar sidebar sidebar";
+    grid-template-rows: 50px 90px 1fr 76px;
+    grid-template-columns: 1fr;
+
+    .mobile-header {
+      display: flex;
+    }
+
+    .main {
+      border-radius: 0;
+    }
+  }
+
+  .footer {
+    @media screen and (max-width: 820px) {
+      display: none;
+    }
+  }
+
+  .sidebar {
+    @media screen and (max-width: 820px) {
+      margin-right: 0;
+      padding: 16px 30px;
+      border-radius: 0 0 24px 24px;
+
+      &__logo {
+        display: none;
+      }
+
+      &__navigation {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+
+        a {
+          flex: 33.333%;
+          li {
+            padding: 14px;
+          }
+        }
+      }
+
+      &__links {
+        display: none;
+      }
+    }
+  }
+}
+
+.main {
+  grid-area: main;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__header {
+    position: relative;
+    background: #293145;
+    border: 1px solid #384156;
+    border-radius: 24px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #4e5e80;
+
+    @media screen and (max-width: 680px) {
+      margin: 8px 8px 0;
+      padding: 8px;
+    }
+
+    @media screen and (max-width: 585px) {
+      border-radius: 12px;
+    }
+  }
+}
+
+.filters {
+  display: flex;
+  gap: 0 8px;
+  align-items: center;
+
+  @media screen and (max-width: 750px) {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    width: 100%;
+    flex-direction: column;
+    background: #293145;
+    border-radius: 12px;
+    gap: 10px;
+    padding: 8px;
+
+    .filter {
+      background: #313b52;
+      border-radius: 22px;
+      width: 100%;
+    }
+  }
+
+  &-active {
+    display: flex !important;
+  }
+}
+
+.filters-btn {
+  border: 0;
+  outline: none;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  background: #222a3a;
+  border-radius: 6px;
+
+  &-clicked svg path {
+    fill: #e7df36;
+  }
+
+  @media screen and (min-width: 750px) {
+    display: none;
+  }
+}
+
+.filter {
+  padding: 11px 25px;
+  background: #222a3a;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-align: center;
+  display: flex;
+
+  &-active {
+    background: #313b52;
+
+    .filter__value {
+      color: #b5c4e3;
+    }
+  }
+
+  &__value {
+    margin-left: 5px;
+  }
+
+  &:hover {
+    background: #252e40;
+  }
+
+  &-loading {
+    pointer-events: none;
+    position: relative;
+    overflow: hidden;
+    color: transparent;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border-top: 1px solid #222a3a;
+      border-bottom: 1px solid #4e5e80;
+      animation: spinner 0.9s infinite;
+    }
+  }
+}
+
+.table {
+  height: 179px;
+  background: url("../assets/images/table.webp") no-repeat center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+
+  .title {
+    color: #4e5e80;
+    margin-top: 13px;
+    margin-bottom: 4px;
+  }
+
+  &__num {
+    color: #b5c4e3;
+    font-family: "Eckhardt Deco", sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+  }
+
+  &__places {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    color: #4e5e80;
+    margin-bottom: 13px;
+    background: #374662 !important;
+    border-radius: 30px !important;
+    padding: 12px 17px !important;
+    margin-top: 22px;
+    span {
+      color: #b5c4e3;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    &:hover {
+      background: url("../assets/images/table-hover.webp") no-repeat center;
+
+      .title {
+        color: #d4ad2c;
+      }
+
+      .table__num {
+        color: #6b560f;
+      }
+
+      .table__places {
+        background: #d4ad2c !important;
+        color: #e8d837;
+
+        span {
+          color: #6b560f;
+        }
+      }
+    }
+  }
+}
+
+.main__out {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 16px;
+  overflow-y: scroll;
+
+  @media screen and (max-width: 1800px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media screen and (max-width: 1550px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 1180px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 900px) {
+    .table {
+      background: url("../assets/images/table-medium.webp") no-repeat center;
+    }
+    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 780px) {
+    .table {
+      background: url("../assets/images/table-small.webp") no-repeat center;
+      font-size: 14px;
+      justify-content: center;
+      background-size: cover;
+
+      &__num {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      &__places {
+        gap: 4px;
+        background: none;
+        padding: 4px;
+      }
+    }
+    gap: 8px;
+    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 650px) {
+    gap: 13px 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 490px) {
+    grid-template-columns: repeat(3, 1fr);
+    .table {
+      height: 90px;
+      width: 100px;
+    }
+    .table__places {
+      padding: 0 !important;
+      background: none !important;
+      margin-top: 0px;
+    }
+  }
+}
+
+// TODO: Сделать адаптив хедера

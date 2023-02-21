@@ -1,0 +1,24 @@
+@@include('./components/html/head.html', {
+    "title": "Rooms"
+})
+
+<html>
+<body class="loading">
+<div class="wrapper">
+    @@include('./components/html/mobile-header.html')
+    @@include('./components/html/header.html')
+    @@include('./components/html/sidebar.html')
+    @@include('./components/html/main.html')
+    @@include('./components/html/footer.html')
+</div>
+    @@include('./components/html/mobile-menu.html')
+    <!-- Через js убирать hidden -->
+    <div class="modal__disable-wallet hidden">
+        <div class="modal__title">Disable the wallet</div>
+        <div class="modal__buttons">
+            <button class="modal__btn btn-active">disable</button>
+            <button class="modal__btn">cancel</button>
+        </div>
+    </div>
+</body>
+</html>
