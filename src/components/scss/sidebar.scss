@@ -44,11 +44,11 @@
     font-size: 16px;
     line-height: 22px;
     cursor: pointer;
-    transition: 0.3s;
-  }
-  &__links:hover a {
-    transition: 0.3s;
-    color: linear-gradient(180deg, #e7df36 0%, #efb23d 100%);
+    transition: 0.1s;
+
+    &:hover {
+      color: #E7DF36;
+    }
   }
 
   @media screen and (max-width: 768px) {
