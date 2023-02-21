@@ -1,13 +1,12 @@
-const place = document.querySelector('.place')
+const place = document.querySelector(".place");
 
 function generateHtml(number) {
-
-    return `
+  return `
             <div class="player player-active">
                 <div class="player__armchair">
                     
                 </div>
-                <div class="player__badge  player-loading"">
+                <div class="player__badge">
                     <div class="player__card">
                         <!-- тут должна находться карта игрока -->
                         <img src="./assets/images/svg/card.svg" alt="card">
@@ -18,11 +17,11 @@ function generateHtml(number) {
                     </div>
                 </div>
             </div>
-    `
+    `;
 }
 
 // У него 2 состояния как на макете, менять их можно убирая класс player-active
 
 for (let i = 1; i <= 10; i++) {
-    place.innerHTML += generateHtml(i)
+  place.innerHTML += generateHtml(i);
 }

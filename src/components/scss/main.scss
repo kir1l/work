@@ -6,7 +6,7 @@
   overflow: hidden;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -25,7 +25,6 @@
     gap: 11px;
     justify-content: center;
 
-
     .slide__info {
       height: 140px;
       padding: 22px;
@@ -37,12 +36,12 @@
       gap: 4px;
 
       .slider__title {
-        color: #4E5E80;
+        color: #4e5e80;
         text-align: center;
       }
 
       .slider__lvl {
-        color: #B5C4E3;
+        color: #b5c4e3;
         font-size: 19px;
         text-align: center;
       }
@@ -50,9 +49,9 @@
       .btn-go {
         border: none;
         outline: none;
-        color: #B5C4E3;
+        color: #b5c4e3;
         padding: 15px 30px;
-        background: #222A3A;
+        background: #222a3a;
         border-radius: 12px;
         display: none;
 
@@ -62,16 +61,17 @@
       }
 
       &-active {
-       .btn-go {
-         display: block;
-       }
+        .btn-go {
+          display: block;
+        }
         .slider__lvl {
           display: none;
         }
       }
 
       &:hover {
-        background: url("../assets/images/tables-frame-hover.webp") center no-repeat;
+        background: url("../assets/images/tables-frame-hover.webp") center
+          no-repeat;
       }
     }
 
@@ -85,13 +85,15 @@
       grid-template-columns: repeat(3, 1fr);
     }
     @media screen and (max-width: 900px) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
     }
     @media screen and (max-width: 590px) {
       grid-template-columns: repeat(3, 100px);
       padding: 30px 0;
       justify-content: space-around;
-
 
       .slide__info {
         height: 60px;
@@ -117,26 +119,25 @@
       margin: 30px 16px 0;
       border-radius: 12px;
     }
-
   }
 
   &__out {
     flex: 1;
   }
 
- .info {
+  .info {
     display: flex;
-    color: #4E5E80;
+    color: #4e5e80;
   }
 
   &__rooms {
-    color: #B5C4E3;
+    color: #b5c4e3;
     margin-left: 16px;
   }
 
   .counter {
     padding: 6px 8px;
-    background: #313B52;
+    background: #313b52;
     border-radius: 50%;
     margin-left: 4px;
     font-size: 12px;
@@ -146,12 +147,14 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom:  -1px;
+    bottom: -1px;
     z-index: 100;
-    background: #252E40;
+    background: #252e40;
     width: 1769px;
     height: 112px;
-    clip-path: path('M0 112C391.797 111.091 659 -7.79844e-05 884.5 -6.10351e-05C1110 -4.40859e-05 1376.61 111.83 1769 112H0Z');
+    clip-path: path(
+      "M0 112C391.797 111.091 659 -7.79844e-05 884.5 -6.10351e-05C1110 -4.40859e-05 1376.61 111.83 1769 112H0Z"
+    );
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,13 +173,13 @@
       }
 
       .title {
-        color: #4E5E80;
+        color: #4e5e80;
         text-align: center;
         margin-bottom: 8px;
       }
 
       .amount {
-        color: #B5C4E3;
+        color: #b5c4e3;
         text-align: center;
       }
     }
@@ -186,21 +189,20 @@
       .info {
         gap: 8px;
       }
-
     }
   }
 
   .button-mode {
     padding: 11px 30px;
     border-radius: 22px;
-    background: #313B52;
+    background: #313b52;
     border: 0;
     outline: 0;
-    color: #B5C4E3;
+    color: #b5c4e3;
 
     &-active {
-      color: #4E5E80;
-      background: #222A3A;
+      color: #4e5e80;
+      background: #222a3a;
     }
   }
 
@@ -223,17 +225,15 @@
       height: 30px;
       border-radius: 6px;
       padding: 8px;
-      background: #222A3A url("../assets/images/svg/ic_list.svg") no-repeat center;
+      background: #222a3a url("../assets/images/svg/ic_list.svg") no-repeat
+        center;
     }
 
     .toggle-list {
-      background: #222A3A url("../assets/images/svg/slaid.svg") no-repeat center;
+      background: #222a3a url("../assets/images/svg/slaid.svg") no-repeat center;
     }
   }
 }
-
-
-
 
 .swiper {
   height: 100%;
@@ -245,13 +245,14 @@
     box-sizing: border-box !important;
   }
 
-  &-slide-prev, &-slide-next {
+  &-slide-prev,
+  &-slide-next {
     margin-bottom: 30px;
     transition: margin-bottom 1s ease;
   }
 
   &-slide-active {
-    transition:  .3s ease;
+    transition: 0.3s ease;
     margin-bottom: 60px;
 
     &:hover {
@@ -259,45 +260,53 @@
       background-size: contain;
 
       .slide__info {
-        background: url("../assets/images/room-frame-hover.webp") center no-repeat;
+        background: url("../assets/images/room-frame-hover.webp") center
+          no-repeat;
 
         .slider__title {
-          color: #E8D837;
+          color: #e8d837;
         }
 
         .slider__lvl {
-          color: #6B560F;
+          color: #6b560f;
         }
-
       }
     }
   }
 
-  &::before, &::after {
-    content: '';
+  &::before,
+  &::after {
+    content: "";
     height: 100%;
     position: absolute;
     top: 0;
     width: 330px;
     z-index: 2;
     pointer-events: none;
-
   }
 
   &::before {
-    background: linear-gradient(90deg, rgba(41,49,69,1) 0%, rgba(41, 49, 69, 0) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(41, 49, 69, 1) 0%,
+      rgba(41, 49, 69, 0) 100%
+    );
     left: 0;
   }
 
   &::after {
-    background: linear-gradient(-90deg, rgba(41,49,69,1) 0%, rgba(41, 49, 69, 0) 100%);
+    background: linear-gradient(
+      -90deg,
+      rgba(41, 49, 69, 1) 0%,
+      rgba(41, 49, 69, 0) 100%
+    );
     right: 0;
   }
   &-slide {
     flex: 20%;
     background: url("../assets/images/room.webp") center no-repeat;
     background-size: contain;
-    transition: background ,3s ease;
+    transition: background, 3s ease;
     max-height: 700px;
     position: relative;
 
@@ -314,12 +323,12 @@
       background-size: contain;
 
       .slider__title {
-        color: #4E5E80;
+        color: #4e5e80;
         text-align: center;
       }
 
       .slider__lvl {
-        color: #B5C4E3;
+        color: #b5c4e3;
         font-size: 19px;
         text-align: center;
       }
@@ -336,23 +345,22 @@
         top: 90px;
       }
       @media screen and (max-width: 500px) {
-        top: 30px;
+        top: 20px;
+        transform: scale(0.6) translateX(-82%);
       }
-      @media screen and (max-width: 500px) and (min-height: 650px){
+      @media screen and (max-width: 500px) and (min-height: 650px) {
         top: 50px;
       }
-      @media screen and (max-width: 500px) and (min-height: 690px){
+      @media screen and (max-width: 500px) and (min-height: 690px) {
         top: 80px;
       }
-      @media screen and (max-width: 500px) and (min-height: 750px){
+      @media screen and (max-width: 500px) and (min-height: 750px) {
         top: 110px;
       }
     }
 
-
-
     @media screen and (max-width: 2000px) {
-      flex: 15%;
+      flex: 21%;
     }
 
     @media screen and (max-width: 1600px) {
@@ -360,28 +368,26 @@
     }
 
     @media screen and (max-width: 1300px) {
-      flex: 25%;
+      flex: 45%;
     }
 
     @media screen and (max-width: 600px) {
       flex: 50%;
     }
-
   }
 
-  &-button-prev, &-button-next {
+  &-button-prev,
+  &-button-next {
     width: 60px !important;
     height: 60px !important;
     right: 40px !important;
     left: auto;
-    transition: background .3s ease;
+    transition: background 0.3s ease;
     z-index: 12938120398102;
 
     &:hover::after {
-      background:
-              #EFB23D
-              url("../assets/images/svg/chevron-hover.svg")
-              no-repeat center;
+      background: #efb23d url("../assets/images/svg/chevron-hover.svg")
+        no-repeat center;
     }
   }
 
@@ -393,15 +399,16 @@
     transform: rotate(180deg);
   }
 
-  &-button-prev::after, &-button-next::after {
+  &-button-prev::after,
+  &-button-next::after {
     box-sizing: border-box;
     width: 60px !important;
     height: 60px !important;
     display: block;
     padding: 22px;
     border-radius: 50%;
-    content: '' !important;
-    background: #222A3A url("../assets/images/svg/chevron.svg") no-repeat center;
+    content: "" !important;
+    background: #222a3a url("../assets/images/svg/chevron.svg") no-repeat center;
     position: absolute;
 
     @media screen and (max-width: 565px) {
@@ -415,7 +422,8 @@
   }
 
   @media screen and (max-width: 565px) {
-    &::before, &::after {
+    &::before,
+    &::after {
       width: 80px;
     }
   }
